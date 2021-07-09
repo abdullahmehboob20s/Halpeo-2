@@ -1016,6 +1016,11 @@ img.product-img {
   background-color: var(--four-bg-color);
 }
 
+/* new added */
+.five-bg-color {
+  background-color: var(--five-bg-color);
+}
+
 /*======
  for "a" tag color 
 ====== */
@@ -1411,4 +1416,38 @@ img.product-img {
 .trusted_partners_card {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+}
+
+/* new added */
+.image_background_effect_orange {
+  position: relative;
+}
+.image_background_effect_orange::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70vw;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--sec-bg-two-color);
+  transform: translateY(-50%);
+  z-index: -1;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.image_background_effect_blue {
+  position: relative;
+}
+
+.image_background_effect_blue::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70vw;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--sec-bg-one-color);
+  transform: translateY(-50%);
+  z-index: -1;
 }

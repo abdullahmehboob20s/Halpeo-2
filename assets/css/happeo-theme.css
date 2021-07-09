@@ -685,6 +685,13 @@ Homepage
   height: auto;
   margin: 0 auto;
 }
+.hero_2 {
+  padding-top: calc(3 * var(--size-52px));
+  padding-bottom: calc(-1 * var(--size-52px));
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 
 .hero::after {
   width: 100%;
@@ -860,6 +867,9 @@ img.product-img {
 .main-tit-color {
   background-color: var(--main-tit-color);
 }
+.white-bg-color {
+  background-color: var(--main-bg-color);
+}
 .one-bg-color {
   background-color: var(--one-bg-color);
 }
@@ -919,6 +929,12 @@ img.product-img {
   content: url("../images/Group 1/check-icon-2.svg");
 }
 
+/* for list style none */
+
+.list-style-none li::before {
+  content: "";
+}
+
 /* =============================================================================================== */
 /* =============================================================================================== */
 /* =========================================== group-2-index-1 =================================== */
@@ -933,6 +949,7 @@ img.product-img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin-top: 100px;
   padding: var(--size-16px);
+  border-radius: 8px;
 }
 
 .group_2_index_1_article img {
@@ -1029,24 +1046,6 @@ img.product-img {
 .mobile_intranet_card.active {
   background-color: var(--one-bg-color);
   border-radius: 5px;
-  padding: var(--size-10px) var(--size-19px);
-}
-
-/* =============================================================================================== */
-/* ===================================== ready_to_go ============================================ */
-/* =============================================================================================== */
-
-.ready_to_go_card_img {
-  width: 150px;
-  height: 110px;
-  margin: 0 0;
-}
-
-.ready_to_go_card_img_2 {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  margin: 0 0;
 }
 
 /* =============================================================================================== */
@@ -1117,13 +1116,169 @@ img.product-img {
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .user_data_list_2 li p {
   margin: 0 0;
 }
-
 .user_data_list_2 li img {
   width: auto;
   margin: 0 0;
   margin-right: 0.5rem;
+}
+
+.user_data_list_3 li {
+  display: flex;
+  margin: 0 0;
+  align-items: center;
+}
+.user_data_list_3 li::before {
+  content: "";
+}
+
+.user_data_list_3 li p {
+  margin: 0 0;
+}
+.user_data_list_3 li img {
+  width: auto;
+  margin: 0 0;
+  margin-right: 0.5rem;
+}
+
+/*  */
+
+.channel_engagement {
+  border-radius: 5px;
+}
+
+/* =============================================================================================== */
+/* ===================================== hapeo_blog_topics ============================================ */
+/* =============================================================================================== */
+
+.clr-blue {
+  background-color: var(--sec-bg-one-color);
+}
+.clr-red {
+  background-color: var(--sec-bg-three-color);
+}
+.clr-yellow {
+  background-color: var(--sec-bg-two-color);
+}
+.clr-purple {
+  background-color: var(--sec-bg-five-color);
+}
+.clr-green {
+  background-color: var(--sec-bg-four-color);
+}
+.clr-dark-green {
+  background-color: var(--main-txt-color);
+}
+
+.hapeo_blog_topics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hapeo_blog_topics_btn {
+  margin: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  line-height: 1;
+}
+
+/* =============================================================================================== */
+/* ===================================== hapeo_blog_cards ============================================ */
+/* =============================================================================================== */
+.hapeo_blog_card {
+  border-radius: 5px;
+  overflow: hidden;
+}
+.hapeo_blog_card.active {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* =============================================================================================== */
+/* ===================================== it_was_founded_years ============================================ */
+/* =============================================================================================== */
+
+.text-clr-blue {
+  color: var(--sec-bg-one-color);
+}
+.text-clr-yellow {
+  color: var(--sec-bg-two-color);
+}
+.text-clr-purple {
+  color: var(--sec-bg-five-color);
+}
+.text-clr-green {
+  color: var(--main-act-color);
+}
+
+/* =============================================================================================== */
+/* ===================================== we_value_card_images_wrapper ============================================ */
+/* =============================================================================================== */
+
+.we_value_card_images_wrapper {
+  display: flex;
+}
+.we_value_card_images_wrapper_1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--size-16px);
+  padding-bottom: var(--size-83px);
+}
+.we_value_card_images_wrapper_2 {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--size-83px);
+}
+
+.we_value_card_images_wrapper_1 img:nth-child(1) {
+  margin-bottom: var(--size-16px);
+  height: 70%;
+}
+.we_value_card_images_wrapper_1 img:nth-child(2) {
+  height: clac(30% -var(--size-16px));
+}
+
+.we_value_card_images_wrapper_2 img:nth-child(1) {
+  margin-bottom: var(--size-16px);
+  height: clac(30% -var(--size-16px));
+}
+.we_value_card_images_wrapper_2 img:nth-child(2) {
+  height: 70%;
+}
+
+.we_value_card_2_images_wrapper {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+.we_value_card_2_images_wrapper_1 {
+  flex: 1;
+  background-color: rgb(216, 216, 216);
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: var(--size-16px);
+}
+.we_value_card_2_images_wrapper_2 {
+  flex: 1;
+  background-color: rgb(216, 216, 216);
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* =============================================================================================== */
+/* =============================================================================================== */
+/* ===================================== trusted_partners_card ============================================ */
+/* =============================================================================================== */
+/* =============================================================================================== */
+.trusted_partners_card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }

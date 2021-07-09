@@ -557,10 +557,13 @@ Navigation
 ---------------*/
 .navigation {
   padding: var(--size-32px) 0;
-  position: fixed;
+  background-color: var(--main-tit-color);
+
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+
   z-index: 2;
 }
 
@@ -578,11 +581,122 @@ Navigation
   font-weight: 400;
   line-height: var(--size-28px);
   letter-spacing: 0;
+  /* color: var(--main-bg-color); */
 }
 
 .navigation .logo {
   max-height: var(--size-40px);
   width: auto;
+}
+
+/*-------------
+Footer
+---------------*/
+footer {
+  padding-bottom: var(--size-52px);
+  background-color: var(--main-tit-color);
+}
+
+footer h2 {
+  color: var(--main-bg-color);
+}
+
+footer ul li,
+footer ul li a {
+  text-align: left;
+  list-style: none;
+  font-weight: normal;
+
+  display: block;
+  margin-top: var(--size-8px);
+  margin-right: var(--size-16px);
+  margin-bottom: var(--size-16px);
+  margin-left: 0;
+
+  font-size: var(--size-19px);
+  font-weight: normal;
+  line-height: var(--size-28px);
+  letter-spacing: 0;
+  color: var(--main-bg-color);
+}
+
+footer ul li:first-child {
+  font-family: "PT Serif", serif;
+  font-size: var(--size-23px);
+  font-weight: 700;
+  line-height: var(--size-32px);
+  letter-spacing: 0;
+}
+
+footer .logo {
+  max-height: var(--size-40px);
+  width: auto;
+}
+
+footer .row {
+  padding: var(--size-32px) 0;
+}
+
+footer > .row:nth-child(3) {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer .marketplace {
+  display: inline-block;
+  margin: 10px;
+  max-height: 40px;
+  width: auto;
+  text-align: left;
+}
+footer .social {
+  float: right;
+  margin: 10px;
+  max-width: 25px;
+  height: auto;
+  opacity: 0.75;
+  z-index: 0;
+}
+
+footer ul.language {
+  display: block;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+footer ul.language li {
+  display: inline-block;
+  text-align: center;
+}
+
+footer ul.language li a {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+footer ul.language li a span {
+  color: rgba(255, 255, 255, 1);
+}
+
+footer ul.language li a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+footer .privacy p {
+  color: rgba(255, 255, 255, 1);
+
+  text-align: center;
+}
+
+footer .privacy p a {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: normal;
+
+  margin: 0 var(--size-22px);
+}
+
+footer .privacy p a:hover {
+  color: rgba(255, 255, 255, 1);
+  font-weight: normal;
 }
 
 /*-------------
@@ -596,6 +710,7 @@ CTAs & Buttons
 
   padding: var(--size-10px) var(--size-32px);
   margin: var(--size-32px) 0;
+
   width: fit-content;
   display: inline-block;
 }
@@ -669,25 +784,14 @@ CTAs & Buttons
   margin: 0;
 }
 
-/* Mines ===== */
-
-.m-0 .btn {
-  margin: 0;
-}
-
 /*-------------
 Homepage
 ---------------*/
 .hero {
+  background-color: var(--main-tit-color);
   padding-top: calc(3 * var(--size-52px));
   padding-bottom: calc(-1 * var(--size-52px));
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-.hero_2 {
-  padding-top: calc(3 * var(--size-52px));
-  padding-bottom: calc(-1 * var(--size-52px));
+
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -702,7 +806,7 @@ Homepage
   display: block;
   height: 11.5rem;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1440px' height='175px' viewBox='0 0 1440 175' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M1440.00049,51.8198994 L1439.99085,174.078667 L0.0167112249,174.078667 L0.000530410977,53.0189617 C385.456608,-109.126359 989.502638,163.528309 1440.00049,51.8198994 Z' id='Combined-Shape' fill='%23002925' fill-rule='nonzero' transform='translate(720.000509, 87.080547) scale(1, -1) translate(-720.000509, -87.080547) '%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
+  background-size: 120%;
   z-index: 0;
 }
 
@@ -715,7 +819,7 @@ Homepage
   display: block;
   height: 11.5rem;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1440px' height='175px' viewBox='0 0 1440 175' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Components/Header-BG' transform='translate(0.000000, -720.000000)' fill='%23E6EDED' fill-rule='nonzero'%3E%3Cpath d='M1440.00049,771.823659 L1439.99085,894.082426 L0.0167112249,894.082426 L0.000530410978,773.022721 C385.456608,610.8774 989.502638,883.532069 1440.00049,771.823659 Z' id='Combined-Shape' transform='translate(720.000509, 807.084306) scale(1, -1) translate(-720.000509, -807.084306) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
+  background-size: 120%;
   z-index: 0;
 }
 
@@ -729,7 +833,21 @@ Homepage
   display: block;
   height: 11rem;
   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1440px' height='175px' viewBox='0 0 1440 175' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Components/Header-BG' transform='translate(0.000000, -720.000000)' fill='%23E6EDED' fill-rule='nonzero'%3E%3Cpath d='M1440.00049,771.823659 L1439.99085,894.082426 L0.0167112249,894.082426 L0.000530410978,773.022721 C385.456608,610.8774 989.502638,883.532069 1440.00049,771.823659 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  background-size: cover;
+  background-size: 120%;
+  z-index: 0;
+}
+
+.wave-dark-front::before {
+  width: 100%;
+  content: "";
+  position: relative;
+  top: 0;
+  background-color: var(--main-bg-color);
+  float: left;
+  display: block;
+  height: 11rem;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1440px' height='175px' viewBox='0 0 1440 175' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cg id='Symbols' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Components/Header-BG' transform='translate(0.000000, -720.000000)' fill='%23002925' fill-rule='nonzero'%3E%3Cpath d='M1440.00049,771.823659 L1439.99085,894.082426 L0.0167112249,894.082426 L0.000530410978,773.022721 C385.456608,610.8774 989.502638,883.532069 1440.00049,771.823659 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120%;
   z-index: 0;
 }
 
@@ -857,12 +975,24 @@ img.product-img {
 .padded {
   padding: var(--size-32px);
 }
-
 /* =============================================================================================== */
 /* =============================================================================================== */
 /* =========================================== my-css ============================================ */
 /* =============================================================================================== */
 /* =============================================================================================== */
+
+/* Mines ===== */
+.m-0 .btn {
+  margin: 0;
+}
+
+.hero_2 {
+  padding-top: calc(3 * var(--size-52px));
+  padding-bottom: calc(-1 * var(--size-52px));
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 
 .main-tit-color {
   background-color: var(--main-tit-color);
